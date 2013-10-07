@@ -1,6 +1,9 @@
 use strict;
 use warnings;
 package DateTime::Moonpig;
+{
+  $DateTime::Moonpig::VERSION = '0.002';
+}
 # ABSTRACT: a DateTime object with different math
 
 use base 'DateTime';
