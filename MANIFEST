@@ -1,9 +1,12 @@
+#dist.ini#
 Changes
 LICENSE
 MANIFEST
 META.yml
 Makefile.PL
 README
+croak.t
 dist.ini
 lib/DateTime/Moonpig.pm
+t/croak.t
 t/datetime.t
