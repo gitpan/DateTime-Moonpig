@@ -1,4 +1,3 @@
-#dist.ini#
 Changes
 LICENSE
 MANIFEST
@@ -8,5 +7,7 @@ README
 croak.t
 dist.ini
 lib/DateTime/Moonpig.pm
+pod2htmd.tmp
+pod2htmi.tmp
 t/croak.t
 t/datetime.t
