@@ -4,6 +4,7 @@ MANIFEST
 META.yml
 Makefile.PL
 README
+README.md
 croak.t
 dist.ini
 lib/DateTime/Moonpig.pm
