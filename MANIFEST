@@ -5,10 +5,10 @@ META.yml
 Makefile.PL
 README
 README.md
-croak.t
 dist.ini
 lib/DateTime/Moonpig.pm
-pod2htmd.tmp
-pod2htmi.tmp
 t/croak.t
 t/datetime.t
+t/lib/MyDaysInterval.pm
+t/manual.t
+t/zones.t
