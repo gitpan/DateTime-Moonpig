@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package DateTime::Moonpig;
 {
-  $DateTime::Moonpig::VERSION = '1.00';
+  $DateTime::Moonpig::VERSION = '1.01';
 }
 # ABSTRACT: a DateTime object with different math
 
