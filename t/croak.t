@@ -5,6 +5,7 @@ use Test::Fatal;
 use Try::Tiny;
 
 use DateTime::Moonpig;
+warn "DateTime version: " . DateTime->VERSION . "\n";
 
 sub jan {
   my ($day) = @_;

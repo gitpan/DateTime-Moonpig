@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package DateTime::Moonpig;
 {
-  $DateTime::Moonpig::VERSION = '1.02';
+  $DateTime::Moonpig::VERSION = '1.03';
 }
 # ABSTRACT: a DateTime object with different math
 
@@ -413,7 +413,7 @@ None of these subtractions will modify any of the argument objects.
 When two time objects are subtracted, the result is normally a number.
 However, the numeric difference is first passed to the target object's
 C<interval_factory> method, which has the option to transform it and
-return an (or something else) instead.  The default
+return an object (or something else) instead.  The default
 C<interval_factory> returns its argument unchanged.  So for example,
 
         $z0   = $x0 - $birthday;       # 10
@@ -436,10 +436,10 @@ savings on 2007-03-11, as most of the USA did, then:
                                           );
 	$next_day = $a_day->plus(24*3600);
 
-At this point C<$next_day> is exactly 24E<middot>86400 seconds ahead
+At this point C<$next_day> is exactly 24E<middot>3600 seconds ahead
 of C<$a_day>. Because the civil calendar day for 2007-03-11 in New
 York was only 23 hours long, C<$next_day> represents represents
-2007-03-12 02:00:00, not 2007-03-12 03:00:00. This should be what you
+2007-03-12 02:00:00 instead of 2007-03-12 01:00:00. This should be what you
 expect; if not please correct your expectation.
 
 =head2 NEW METHODS
@@ -501,6 +501,8 @@ L<"OVERLOADING">, above.
 Please submit bug reports at
 L<https://github.com/mjdominus/DateTime-Moonpig/issues>.
 
+Please *do not* submit bug reports at C<http://rt.cpan.org/>.
+
 =head1 LICENSE
 
 Copyright E<copy> 2010 IC Group, Inc.
@@ -521,7 +523,26 @@ Ricardo SIGNES, C<rjbs@cpan.org>
 
 C<DateTime::Moonpig> was originally part of the I<Moonpig> project,
 where it was used successfully for several years before this CPAN
-release.  For more complete details, see L<http://perl.plover.com/yak/Moonpig/>.
+release.  For more complete details, see:
+
+=over 4
+
+=item *
+
+L<http://blog.plover.com/prog/Moonpig.html> - Long blog article on the design and development of Moonpig generally.
+
+=item *
+
+L<http://perl.plover.com/yak/Moonpig/> - Slides and other materials
+from a one-hour talk about Moonpig.
+
+=item *
+
+L<http://www.perladvent.org/2013/2013-12-23.html> - Perl 2013 Advent
+Calendar article introducing this module and complaining about
+C<DateTime::Duration>.
+
+=back
 
 =cut
 
